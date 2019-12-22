@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	*{margin:0;padding:0;}
+	li{list-style: none;}
+	#wrap{
+		width:500px;
+		margin:50px auto;
+	}
+	#wrap textarea{
+		width:100%;
+		height: 150px;
+	}
+	#btn{
+		float:right;
+		width:100px;
+		height:30px;
+		cursor:pointer;
+	}
+	#lists{
+		margin-top:50px;
+	}
+	#lists li{
+		width:100%;
+		margin-top:5px;
+		line-height: 30px;
+		border-bottom:1px solid #000;
+		text-indent:25px;
+	}
+	</style>
+</head>
+
+<body>
+<div id="wrap">
+	<textarea name=""id="text"></textarea>
+	<input id="btn"type="button"value="提交">
+	<ul id="lists">
+		<!--<li>留言内容</li>-->
+	</ul>
+</div>
+<script>
+	let oBtn=document.getElementById("btn"),
+		oLists=document.getElementById("lists"),
+		oText=document.getElementById("text");
+	oBtn.onclick=function(){
+		let oValue=oText.value;
+		oLists.innerHTML +="<li>"+oValue+"</li>"
+		oText.vslue="";
+	}
+	</script>
+</body>
+</html>
